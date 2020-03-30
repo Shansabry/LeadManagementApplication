@@ -1,11 +1,19 @@
-import React, {Component} from 'react'
-import ReactDom from 'react-dom'
-
+import React, { Component, Fragment } from "react";
+import ReactDom from "react-dom";
+import Header from "./layout/Header";
+import Dashboard from "./leads/dashboard";
 
 class App extends Component {
-    render() {
-        return <h1>React app</h1>// main render
-    }
+  render() {
+    return (
+      <Fragment>
+        <Header />
+        <div className="container">
+          <Dashboard />
+        </div>
+      </Fragment>
+    );
+  }
 }
 
-ReactDom.render(<App />, document.getElementById('app'))//points the index.html in template
+ReactDom.render(<App />, document.getElementById("app")); //points the index.html in template
